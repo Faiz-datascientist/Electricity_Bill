@@ -2,7 +2,7 @@ import fetch_data
 import sqlite3
 
 def bill_calculation(id):
-    conn = sqlite3.connect('Form.db')
+    conn = sqlite3.connect('mydb.db')
     with conn:
         cursor = conn.cursor()
     cursor.execute('SELECT Units,Months_due,Bill,Fine FROM Customer WHERE ID='+(str)(id))
